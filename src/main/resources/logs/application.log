@@ -596,3 +596,290 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hotel' already exists
 2020-03-20 | 16:28:12.874 | [] |  INFO | [/api]                         | (   173) | Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-03-20 | 16:28:12.874 | [] |  INFO | DispatcherServlet              | (   525) | Initializing Servlet 'dispatcherServlet'
 2020-03-20 | 16:28:12.884 | [] |  INFO | DispatcherServlet              | (   547) | Completed initialization in 10 ms
+2020-03-20 | 16:45:22.154 | [] |  INFO | HotelAppApplication            | (    55) | Starting HotelAppApplication on Mario with PID 7236 (D:\mario\hotel-app\target\classes started by OEM in D:\mario\hotel-app)
+2020-03-20 | 16:45:22.159 | [] | DEBUG | HotelAppApplication            | (    56) | Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-20 | 16:45:22.159 | [] |  INFO | HotelAppApplication            | (   655) | The following profiles are active: dev
+2020-03-20 | 16:45:22.749 | [] |  INFO | RepositoryConfigurationDelegate | (   249) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-20 | 16:45:22.749 | [] |  INFO | RepositoryConfigurationDelegate | (   127) | Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-03-20 | 16:45:22.769 | [] |  INFO | RepositoryConfigurationExtensionSupport | (   348) | Spring Data JDBC - Could not safely identify store assignment for repository candidate interface mario.repository.HotelRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-03-20 | 16:45:22.769 | [] |  INFO | RepositoryConfigurationDelegate | (   187) | Finished Spring Data repository scanning in 20ms. Found 0 JDBC repository interfaces.
+2020-03-20 | 16:45:22.779 | [] |  INFO | RepositoryConfigurationDelegate | (   249) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-20 | 16:45:22.779 | [] |  INFO | RepositoryConfigurationDelegate | (   127) | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-20 | 16:45:22.799 | [] |  INFO | RepositoryConfigurationDelegate | (   187) | Finished Spring Data repository scanning in 15ms. Found 1 JPA repository interfaces.
+2020-03-20 | 16:45:23.139 | [] |  INFO | TomcatWebServer                | (    92) | Tomcat initialized with port(s): 8080 (http)
+2020-03-20 | 16:45:23.150 | [] |  INFO | StandardService                | (   173) | Starting service [Tomcat]
+2020-03-20 | 16:45:23.155 | [] |  INFO | StandardEngine                 | (   173) | Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-20 | 16:45:23.255 | [] |  INFO | [/api]                         | (   173) | Initializing Spring embedded WebApplicationContext
+2020-03-20 | 16:45:23.255 | [] |  INFO | ContextLoader                  | (   284) | Root WebApplicationContext: initialization completed in 1056 ms
+2020-03-20 | 16:45:23.339 | [] |  INFO | LogHelper                      | (    31) | HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-20 | 16:45:23.380 | [] |  INFO | Version                        | (    44) | HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-20 | 16:45:23.450 | [] |  INFO | Version                        | (    49) | HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-20 | 16:45:23.500 | [] |  INFO | HikariDataSource               | (   110) | HikariPool-1 - Starting...
+2020-03-20 | 16:45:24.599 | [] | ERROR | HikariPool                     | (   587) | HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user ''@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at mario.HotelAppApplication.main(HotelAppApplication.java:10)
+2020-03-20 | 16:45:24.599 | [] |  WARN | JdbcEnvironmentInitiator       | (   132) | HHH000342: Could not obtain connection to query metadata : Access denied for user ''@'localhost' (using password: NO)
+2020-03-20 | 16:45:24.599 | [] |  WARN | AnnotationConfigServletWebServerApplicationContext | (   558) | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2020-03-20 | 16:45:24.599 | [] |  INFO | StandardService                | (   173) | Stopping service [Tomcat]
+2020-03-20 | 16:45:24.610 | [] |  INFO | ConditionEvaluationReportLoggingListener | (   136) | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-20 | 16:45:24.620 | [] | ERROR | SpringApplication              | (   826) | Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at mario.HotelAppApplication.main(HotelAppApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2020-03-20 | 16:45:47.922 | [] |  INFO | HotelAppApplication            | (    55) | Starting HotelAppApplication on Mario with PID 9916 (D:\mario\hotel-app\target\classes started by OEM in D:\mario\hotel-app)
+2020-03-20 | 16:45:47.938 | [] | DEBUG | HotelAppApplication            | (    56) | Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-20 | 16:45:47.938 | [] |  INFO | HotelAppApplication            | (   655) | The following profiles are active: dev
+2020-03-20 | 16:45:48.563 | [] |  INFO | RepositoryConfigurationDelegate | (   249) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-20 | 16:45:48.563 | [] |  INFO | RepositoryConfigurationDelegate | (   127) | Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-03-20 | 16:45:48.579 | [] |  INFO | RepositoryConfigurationExtensionSupport | (   348) | Spring Data JDBC - Could not safely identify store assignment for repository candidate interface mario.repository.HotelRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-03-20 | 16:45:48.579 | [] |  INFO | RepositoryConfigurationDelegate | (   187) | Finished Spring Data repository scanning in 19ms. Found 0 JDBC repository interfaces.
+2020-03-20 | 16:45:48.579 | [] |  INFO | RepositoryConfigurationDelegate | (   249) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-20 | 16:45:48.579 | [] |  INFO | RepositoryConfigurationDelegate | (   127) | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-20 | 16:45:48.610 | [] |  INFO | RepositoryConfigurationDelegate | (   187) | Finished Spring Data repository scanning in 16ms. Found 1 JPA repository interfaces.
+2020-03-20 | 16:45:48.922 | [] |  INFO | TomcatWebServer                | (    92) | Tomcat initialized with port(s): 8080 (http)
+2020-03-20 | 16:45:48.938 | [] |  INFO | StandardService                | (   173) | Starting service [Tomcat]
+2020-03-20 | 16:45:48.938 | [] |  INFO | StandardEngine                 | (   173) | Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-20 | 16:45:49.032 | [] |  INFO | [/api]                         | (   173) | Initializing Spring embedded WebApplicationContext
+2020-03-20 | 16:45:49.032 | [] |  INFO | ContextLoader                  | (   284) | Root WebApplicationContext: initialization completed in 1031 ms
+2020-03-20 | 16:45:49.125 | [] |  INFO | LogHelper                      | (    31) | HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-20 | 16:45:49.172 | [] |  INFO | Version                        | (    44) | HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-20 | 16:45:49.235 | [] |  INFO | Version                        | (    49) | HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-20 | 16:45:49.282 | [] |  INFO | HikariDataSource               | (   110) | HikariPool-1 - Starting...
+2020-03-20 | 16:45:50.375 | [] | ERROR | HikariPool                     | (   587) | HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user ''@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at mario.HotelAppApplication.main(HotelAppApplication.java:10)
+2020-03-20 | 16:45:50.375 | [] |  WARN | JdbcEnvironmentInitiator       | (   132) | HHH000342: Could not obtain connection to query metadata : Access denied for user ''@'localhost' (using password: NO)
+2020-03-20 | 16:45:50.375 | [] |  WARN | AnnotationConfigServletWebServerApplicationContext | (   558) | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2020-03-20 | 16:45:50.375 | [] |  INFO | StandardService                | (   173) | Stopping service [Tomcat]
+2020-03-20 | 16:45:50.391 | [] |  INFO | ConditionEvaluationReportLoggingListener | (   136) | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-20 | 16:45:50.391 | [] | ERROR | SpringApplication              | (   826) | Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at mario.HotelAppApplication.main(HotelAppApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2020-03-20 | 16:46:19.398 | [] |  INFO | HotelAppApplication            | (    55) | Starting HotelAppApplication on Mario with PID 10400 (D:\mario\hotel-app\target\classes started by OEM in D:\mario\hotel-app)
+2020-03-20 | 16:46:19.398 | [] | DEBUG | HotelAppApplication            | (    56) | Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-20 | 16:46:19.398 | [] |  INFO | HotelAppApplication            | (   655) | The following profiles are active: dev
+2020-03-20 | 16:46:19.961 | [] |  INFO | RepositoryConfigurationDelegate | (   249) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-20 | 16:46:19.961 | [] |  INFO | RepositoryConfigurationDelegate | (   127) | Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-03-20 | 16:46:19.976 | [] |  INFO | RepositoryConfigurationExtensionSupport | (   348) | Spring Data JDBC - Could not safely identify store assignment for repository candidate interface mario.repository.HotelRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-03-20 | 16:46:19.976 | [] |  INFO | RepositoryConfigurationDelegate | (   187) | Finished Spring Data repository scanning in 19ms. Found 0 JDBC repository interfaces.
+2020-03-20 | 16:46:19.976 | [] |  INFO | RepositoryConfigurationDelegate | (   249) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-20 | 16:46:19.976 | [] |  INFO | RepositoryConfigurationDelegate | (   127) | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-20 | 16:46:20.008 | [] |  INFO | RepositoryConfigurationDelegate | (   187) | Finished Spring Data repository scanning in 15ms. Found 1 JPA repository interfaces.
+2020-03-20 | 16:46:20.320 | [] |  INFO | TomcatWebServer                | (    92) | Tomcat initialized with port(s): 8080 (http)
+2020-03-20 | 16:46:20.336 | [] |  INFO | StandardService                | (   173) | Starting service [Tomcat]
+2020-03-20 | 16:46:20.336 | [] |  INFO | StandardEngine                 | (   173) | Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-20 | 16:46:20.430 | [] |  INFO | [/api]                         | (   173) | Initializing Spring embedded WebApplicationContext
+2020-03-20 | 16:46:20.430 | [] |  INFO | ContextLoader                  | (   284) | Root WebApplicationContext: initialization completed in 938 ms
+2020-03-20 | 16:46:20.508 | [] |  INFO | LogHelper                      | (    31) | HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-20 | 16:46:20.554 | [] |  INFO | Version                        | (    44) | HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-20 | 16:46:20.617 | [] |  INFO | Version                        | (    49) | HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-20 | 16:46:20.679 | [] |  INFO | HikariDataSource               | (   110) | HikariPool-1 - Starting...
+2020-03-20 | 16:46:20.773 | [] |  INFO | HikariDataSource               | (   123) | HikariPool-1 - Start completed.
+2020-03-20 | 16:46:20.773 | [] |  INFO | Dialect                        | (   172) | HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-03-20 | 16:46:21.132 | [] |  INFO | JtaPlatformInitiator           | (    52) | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-20 | 16:46:21.132 | [] |  INFO | LocalContainerEntityManagerFactoryBean | (   416) | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-20 | 16:46:21.336 | [] |  WARN | JpaBaseConfiguration$JpaWebConfiguration | (   220) | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-20 | 16:46:21.429 | [] |  INFO | ThreadPoolTaskExecutor         | (   181) | Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-20 | 16:46:21.507 | [] |  WARN | Configuration$DefaultTemplateResolverConfiguration | (   106) | Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-03-20 | 16:46:21.617 | [] |  INFO | TomcatWebServer                | (   204) | Tomcat started on port(s): 8080 (http) with context path '/api'
+2020-03-20 | 16:46:21.617 | [] |  INFO | HotelAppApplication            | (    61) | Started HotelAppApplication in 2.541 seconds (JVM running for 3.209)
+2020-03-20 | 16:46:39.454 | [] |  INFO | [/api]                         | (   173) | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 | 16:46:39.454 | [] |  INFO | DispatcherServlet              | (   525) | Initializing Servlet 'dispatcherServlet'
+2020-03-20 | 16:46:39.470 | [] |  INFO | DispatcherServlet              | (   547) | Completed initialization in 16 ms
+2020-03-20 | 16:46:39.579 | [] | DEBUG | HotelService                   | (    25) | Hotels:[mario.models.Hotel@50e878da, mario.models.Hotel@7860ca79, mario.models.Hotel@222a9839, mario.models.Hotel@191ccab6, mario.models.Hotel@45e01375, mario.models.Hotel@3b2d3ab2, mario.models.Hotel@4db086be, mario.models.Hotel@3206bcc4]
+2020-03-20 | 16:48:00.023 | [] | DEBUG | HotelService                   | (    25) | Hotels:[mario.models.Hotel@911829d, mario.models.Hotel@1417ae92, mario.models.Hotel@38d26d0e, mario.models.Hotel@6c3e1fa2, mario.models.Hotel@693e7dd2, mario.models.Hotel@40742d59, mario.models.Hotel@773a5385, mario.models.Hotel@6d70605d]
