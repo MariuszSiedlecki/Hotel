@@ -14,8 +14,8 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Hotel {
 
@@ -25,10 +25,11 @@ public class Hotel {
 
     @NotNull
     private String title;
+
     @NotNull
     private String country;
 
     private String rate;
 
-    private String address;
+
 }
