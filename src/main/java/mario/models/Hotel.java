@@ -1,5 +1,6 @@
 package mario.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,5 +32,15 @@ public class Hotel {
 
     private String rate;
 
+//    @JsonIgnore
+    @OneToOne(mappedBy = "hotel",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Address address;
+
+//    @JsonIgnore
+    @ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @JoinTable(name = "hotel_room",
+            joinColumns = @JoinColumn(name = "hotel_id"),
+            inverseJoinColumns = @JoinColumn(name = "room_id"))
+    private List<Room> rooms;
 
 }
