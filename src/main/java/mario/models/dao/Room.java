@@ -1,4 +1,4 @@
-package mario.models;
+package mario.models.dao;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -10,7 +10,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.StringJoiner;
 
 @Getter
 @Setter
@@ -30,13 +29,24 @@ public class Room {
     @ManyToMany(mappedBy = "rooms")
     private List<Hotel> hotel;
 
+//    @Override
+//    public String toString() {
+//        return new StringJoiner(", ", "", "")
+//
+//                .add("type='" + type + "'")
+//                .add("bad='" + bad + "'")
+//                .add("capacity='" + capacity + "'")
+//                .toString();
+//    }
+
     @Override
     public String toString() {
-        return new StringJoiner(", ", "", "")
-
-                .add("type='" + type + "'")
-                .add("bad='" + bad + "'")
-                .add("capacity='" + capacity + "'")
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("type", type)
+                .append("bad", bad)
+                .append("capacity", capacity)
+                .append("hotel", hotel)
                 .toString();
     }
 }
