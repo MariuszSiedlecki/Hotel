@@ -1,0 +1,36 @@
+
+<div lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="table">
+    <table class="table table-hover table-bordered text-center table-fixed">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Country</th>
+            <th>Partner code</th>
+            <th>Rate</th>
+            <th>Email</th>
+            <th>
+                <form action="/new-page" method="get">
+                    <button type="submit" class="btn btn-outline-warn btn-sm">New</button>
+                </form>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="h:${hotels}">
+            <td></td>
+            <td th:text="${h.getTitle()}"></td>
+            <td th:text="${h.getCountry()}"></td>
+            <td th:text="${h.getPartnerCode()}"></td>
+            <td th:text="${h.getRate()}"></td>
+            <td th:text="${h.getAddress().getEmail()}"></td>
+            <td>
+                <form action="/edit-page" method="get">
+                    <input type="hidden" name="uuid" th:value="${h.getPartnerCode()}">
+                      <button type="submit" class="btn btn-outline-info btn-sm">Edit</button>
+                 </form>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+</div>
