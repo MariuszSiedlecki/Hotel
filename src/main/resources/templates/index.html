@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header::header">
+</head>
+    <body>
+        <div th:replace="navigation::navi"></div>
+        <div class="container">
+            <h4 th:if="${info}" th:text="${info}"></h4>
+        </div>
+        <div class="row justify-content-center">
+            <div th:replace="table::table">
+            </div>
+        </div>
+
+    </body>
+</html>
