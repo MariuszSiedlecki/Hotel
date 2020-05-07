@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header::header">
+    <body>
+<div lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="table">
+    <form action="/edit" method="post" id="edit"></form>
+    <table class="table table-hover table-bordered text-center table-fixed">
+        <thead>
+        <tr>
+            <th>Partner code</th>
+            <th>Title</th>
+            <th>Country</th>
+            <th>Rate</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td  th:text="${hotel.getPartnerCode()}"></td>
+                <td><input type="text" name="title" form="edit" th:value="${hotel.getTitle()}"></td>
+                <td><input type="text" name="country" form="edit" th:value="${hotel.getCountry()}"></td>
+                <td><input type="range"max="5" name="rate" form="edit" th:value="${hotel.getRate()}"></td>
+                <td><input type="email" name="email" form="edit" th:value="${hotel.getAddress().getEmail()}"></td>
+                <td><input type="hidden" name="partnerCode" form="edit" th:value="${hotel.getPartnerCode()}">
+            <button type="submit" class="btn btn-outline-info btn-sm" form="edit">Save</button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
