@@ -10,11 +10,12 @@ public class AppConfiguration {
     @Configuration
     @Profile("dev")
     @PropertySource("classpath:config-dev.properties")
-    static class Development{}
-
+    static class Development {
+    }
 
     @Configuration
     @Profile("prod")
     @PropertySource("classpath:config-prod.properties")
-    static class Production{}
+    static class Production {
+    }
 }
