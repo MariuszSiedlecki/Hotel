@@ -21,6 +21,9 @@ public class HotelDto {
     private AddressDto address;
     private List<RoomDto> rooms;
 
+    public HotelDto(String krakow) {
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this)
