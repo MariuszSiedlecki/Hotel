@@ -29,6 +29,10 @@ public class HotelServiceDao {
         this.roomRepository = roomRepository;
     }
 
+    public HotelServiceDao() {
+
+    }
+
     public List<Hotel> getHotels(){
       List<Hotel>hotels =hotelRepository.findAll();
         logger.debug("Hotels:{}",hotels);
