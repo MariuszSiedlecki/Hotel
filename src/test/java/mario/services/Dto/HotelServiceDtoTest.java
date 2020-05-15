@@ -12,7 +12,22 @@ import java.util.List;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
+//@RunWith(MockitoJUnitRunner.class)
 class HotelServiceDtoTest {
+//
+//    @Mock
+//    HotelRepository hotelRepository;
+//
+//    @InjectMocks
+//    HotelServiceDto hotelServiceDto;
+
+
+//
+//    @Before
+//    public void init(){
+//        given(hotelServiceDto.getHotels()).willReturn(prepareMockData());
+//        given(hotelServiceDto.getHotelsByCountry()).willReturn(prepareHotelDtosCountry());
+//    }
 
     @Test
     void should_get_hotels_by_city() {
@@ -25,6 +40,7 @@ class HotelServiceDtoTest {
         Assert.assertThat(hotelServiceDto.getHotelsByCity("Krakow"), Matchers.hasSize(2));
     }
 
+
     private List<HotelDto> prepareMockData() {
         List<HotelDto> hotelList = new ArrayList<>();
         hotelList.add(new HotelDto("Krakow"));
@@ -32,4 +48,20 @@ class HotelServiceDtoTest {
         return hotelList;
     }
 
+
+    @Test
+     void should_get_hotels_by_country(){
+     HotelServiceDto hotelServiceDto = mock(HotelServiceDto.class);
+     given(hotelServiceDto.getHotelsByCountry("")).willReturn(prepareHotelDtosCountry());
+
+     List<HotelDto>hdt = hotelServiceDto.getHotelsByCountry("Polska");
+     Assert.assertEquals(hdt,hotelServiceDto.getHotelsByCountry("USA"));
+
+    }
+    private List<HotelDto> prepareHotelDtosCountry () {
+        List<HotelDto> listPrepare = new ArrayList<>();
+        listPrepare.add(new HotelDto("Polska"));
+        listPrepare.add(new HotelDto("USA"));
+        return listPrepare;
+    }
 }
