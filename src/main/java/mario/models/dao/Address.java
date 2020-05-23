@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.hibernate.validator.constraints.URL;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -50,18 +49,4 @@ public class Address {
                 .toString();
     }
 
-    //------to jest już nie potrzebne
-//    @Override
-//    public String toString() {
-//        return new StringJoiner(", ",  "", "")
-//
-//                .add("city='" + city + "'")
-//                .add("street='" + street + "'")
-//                .add("streetNumber='" + streetNumber + "'")
-//                .add("email='" + email + "'")
-//                .add("phone='" + phone + "'")
-//                .add("url='" + url + "'")
-//
-//                .toString();
-//    }
 }
